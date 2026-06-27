@@ -1,13 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mystify World</title>
-</head>
-<body>
-  <h1>Mystify World</h1>
-  <p>AI-powered horror shorts publishing system.</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystify World AI Publisher</title>
 
-  <a href="privacy.html">Privacy Policy</a><br>
-  <a href="terms.html">Terms of Service</a>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #2b0a4a, #050505 65%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 650px;
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid #7c3cff;
+      border-radius: 22px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 0 35px rgba(124, 60, 255, 0.5);
+    }
+
+    h1 {
+      color: #b57cff;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+    }
+
+    button {
+      background: #7c3cff;
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      margin: 8px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #9b6cff;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 15px;
+      border-radius: 12px;
+      border: none;
+      padding: 15px;
+      font-size: 15px;
+      resize: none;
+      box-sizing: border-box;
+    }
+
+    .status {
+      margin-top: 18px;
+      color: #7cffb2;
+      font-weight: bold;
+    }
+
+    .links {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #caa7ff;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Mystify World</h1>
+    <p>AI-powered TikTok and YouTube horror shorts publisher.</p>
+
+    <button onclick="loginTikTok()">Login with TikTok</button>
+
+    <textarea id="content">
+A mysterious voice was heard from the attic at midnight. No one was home, but the recording kept repeating: "I am still here."
+    </textarea>
+
+    <br />
+
+    <button onclick="generateContent()">Generate AI Content</button>
+    <button onclick="publishTikTok()">Publish to TikTok</button>
+
+    <div class="status" id="status">
+      Status: Ready for TikTok authorization
+    </div>
+
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+
+  <script>
+    function loginTikTok() {
+      document.getElementById("status").innerText =
+        "Status: TikTok login flow started. User authorization required.";
+    }
+
+    function generateContent() {
+      document.getElementById("content").value =
+        "AI Generated Horror Short: A forgotten phone rings inside an abandoned hospital. When the screen lights up, it shows a call from a patient who disappeared thirty years ago.";
+      
+      document.getElementById("status").innerText =
+        "Status: AI content generated successfully.";
+    }
+
+    function publishTikTok() {
+      document.getElementById("status").innerText =
+        "Status: Content ready to publish to the authorized TikTok account.";
+    }
+  </script>
 </body>
 </html>
