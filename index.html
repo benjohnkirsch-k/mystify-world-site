@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="monetag" content="bb036e21c3ba8de9ad83ca7530be59e1">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name='admaven-placement' content=BqTs7qjg8>
-  <title>Mystify World AI Publisher</title>
+  <meta property="og:url"
+content="https://benjohnkirsch-k.github.io/mystify-world-site/">
 
+  <title>Mystify World AI Publisher</title>
+  <meta name="description" content="Mystify World AI Publisher is an AI-powered platform for creating horror short stories and publishing vertical videos for entertainment." />
+
+  <link rel="icon" href="icon.png" type="image/png" />
+
+ 
   <style>
     body {
       margin: 0;
@@ -14,122 +19,171 @@
       background: radial-gradient(circle at top, #2b0a4a, #050505 65%);
       color: white;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .card {
+    header {
+      text-align: center;
+      padding: 50px 20px 25px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #9c7cff;
+      margin: 10px 0;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #ddd;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .container {
       width: 90%;
-      max-width: 650px;
+      max-width: 900px;
+      margin: 30px auto;
       background: rgba(0, 0, 0, 0.75);
       border: 1px solid #7c3cff;
       border-radius: 22px;
       padding: 30px;
-      text-align: center;
-      box-shadow: 0 0 35px rgba(124, 60, 255, 0.5);
+      box-shadow: 0 0 35px rgba(124, 60, 255, 0.35);
     }
 
-    h1 {
-      color: #b57cff;
-      font-size: 42px;
-      margin-bottom: 10px;
+    h2 {
+      color: #b9a4ff;
     }
 
     p {
-      color: #ddd;
-    }
-
-    button {
-      background: #7c3cff;
-      color: white;
-      border: none;
-      padding: 14px 22px;
-      margin: 8px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background: #9b6cff;
+      line-height: 1.7;
+      color: #eee;
     }
 
     textarea {
       width: 100%;
-      height: 150px;
-      margin-top: 15px;
+      min-height: 140px;
       border-radius: 12px;
       border: none;
       padding: 15px;
       font-size: 15px;
-      resize: none;
+      resize: vertical;
       box-sizing: border-box;
     }
 
+    button {
+      background: #8b6cff;
+      color: white;
+      border: none;
+      padding: 13px 22px;
+      border-radius: 12px;
+      margin: 10px 8px 10px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #a58cff;
+    }
+
     .status {
-      margin-top: 18px;
-      color: #7cffb2;
+      color: #7dffb2;
+      margin-top: 15px;
       font-weight: bold;
     }
 
     .links {
-      margin-top: 25px;
-      font-size: 14px;
+      text-align: center;
+      margin: 30px 0 10px;
     }
 
     .links a {
       color: #caa7ff;
-      margin: 0 10px;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 25px;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>Mystify World</h1>
-    <p>AI-powered TikTok and YouTube horror shorts publisher.</p>
 
-    <button onclick="loginTikTok()">Login with TikTok</button>
+<header>
+  <img src="icon.png" alt="Mystify World AI Publisher icon" class="logo" />
+  <h1>Mystify World AI Publisher</h1>
+  <p class="subtitle">
+    An AI-powered entertainment platform for creating daily horror short stories,
+    generating creative video ideas, and publishing vertical content for social platforms.
+  </p>
+</header>
 
-    <textarea id="content">
-A mysterious voice was heard from the attic at midnight. No one was home, but the recording kept repeating: "I am still here."
-    </textarea>
+<main class="container">
+  <h2>About Mystify World</h2>
+  <p>
+    Mystify World AI Publisher helps create original AI-generated horror stories,
+    short video scripts, and publishing-ready content for entertainment audiences.
+    The platform is designed for creators who publish short horror stories on TikTok,
+    YouTube Shorts, Facebook Reels, and other social platforms.
+  </p>
 
-    <br />
+  <h2>AI Horror Story Generator</h2>
+  <p>
+    Generate a short horror story idea and prepare it for vertical video publishing.
+  </p>
 
-    <button onclick="generateContent()">Generate AI Content</button>
-    <button onclick="publishTikTok()">Publish to TikTok</button>
+  <textarea id="content">A mysterious voice was heard from the attic at midnight. No one was home, but the recording kept repeating: "I am still here."</textarea>
 
-    <div class="status" id="status">
-      Status: Ready for TikTok authorization
-    </div>
+  <br />
 
-    <div class="links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
+  <button onclick="generateContent()">Generate AI Content</button>
+  <button onclick="publishTikTok()">Prepare for TikTok</button>
+
+  <p id="status" class="status">Status: Ready for content creation</p>
+
+  <h2>Platform Use</h2>
+  <p>
+    This website is publicly accessible and provides information about the Mystify World AI Publisher application,
+    including its purpose, functionality, privacy practices, and terms of use.
+  </p>
+
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
   </div>
+</main>
 
-  <script>
-    function loginTikTok() {
-      document.getElementById("status").innerText =
-        "Status: TikTok login flow started. User authorization required.";
-    }
+<footer>
+  © 2026 Mystify World AI Publisher. All rights reserved.
+</footer>
 
-    function generateContent() {
-      document.getElementById("content").value =
-        "AI Generated Horror Short: A forgotten phone rings inside an abandoned hospital. When the screen lights up, it shows a call from a patient who disappeared thirty years ago.";
-      
-      document.getElementById("status").innerText =
-        "Status: AI content generated successfully.";
-    }
+<script>
+  function generateContent() {
+    document.getElementById("content").value =
+      "AI Generated Horror Short: At 3:00 AM, an old phone rang inside an abandoned house. When the screen lit up, the caller ID showed the name of someone who died years ago.";
 
-    function publishTikTok() {
-      document.getElementById("status").innerText =
-        "Status: Content ready to publish to the authorized TikTok account.";
-    }
-  </script>
+    document.getElementById("status").innerText =
+      "Status: AI content generated successfully.";
+  }
+
+  function publishTikTok() {
+    document.getElementById("status").innerText =
+      "Status: Content prepared for TikTok publishing after user authorization.";
+  }
+</script>
+
+
+
 </body>
 </html>
